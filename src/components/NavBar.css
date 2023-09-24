@@ -1,0 +1,26 @@
+.dropdown-menu {
+    @apply font-medium flex flex-col w-full md:w-max p-0 md:p-4 md:mt-0 md:border-0 relative md:absolute bg-transparent md:bg-blue-900;
+    @apply  translate-y-0 md:translate-y-[6.75rem] md:gap-[1rem]
+}
+
+.dropdown-item{
+    @apply py-2 px-3 text-white md:bg-transparent md:p-0 md:text-xl text-[1.1rem] flex justify-start items-center;
+}
+
+.burger {
+    @apply inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200;
+
+}
+
+.navbar-menu{
+    @apply h-max md:h-[5rem] md:items-center
+}
+
+.mobile-dropdown{
+ @apply font-medium flex flex-col w-full p-4 md:p-0 rounded-lg md:bg-transparent md:flex-row md:space-x-8 md:mt-0 md:border-0 md:gap-0 gap-[1rem];
+ @apply bg-[#1f2937] h-full md:items-center
+}
+
+.mobile-dropdown-item{
+    @apply h-max md:h-[5rem] md:items-center md:flex
+}
