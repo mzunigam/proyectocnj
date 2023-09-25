@@ -1,3 +1,14 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+    @tailwind base;
+    @tailwind components;
+    @tailwind utilities;
+
+    html{
+        cursor: url('./assets/cursor.png'),auto;
+    }
+    .background{
+        height: 100%;
+        width: 100%;
+        background: url("./assets/banner.gif") no-repeat 0% 125%;
+        background-size: cover;
+        position: relative;
+    }

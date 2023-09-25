@@ -1,10 +1,13 @@
 .dropdown-menu {
-    @apply font-medium flex flex-col w-full md:w-max p-0 md:p-4 md:mt-0 md:border-0 relative md:absolute bg-transparent md:bg-blue-900;
-    @apply  translate-y-0 md:translate-y-[6.75rem] md:gap-[1rem]
+    @apply font-medium flex-col w-full md:w-max p-0 md:mt-0 md:border-0 relative md:absolute bg-transparent md:bg-blue-900;
+    @apply md:gap-[1rem] md:w-full md:min-w-[12.5rem];
+    display: none;
+    @apply md:hover:flex;
 }
 
-.dropdown-item{
+.dropdown-item {
     @apply py-2 px-3 text-white md:bg-transparent md:p-0 md:text-xl text-[1.1rem] flex justify-start items-center;
+    @apply md:py-[1rem] md:h-max md:px-[1rem] hover:bg-[#5b5ca2] md:hover:text-yellow-400;
 }
 
 .burger {
@@ -12,15 +15,35 @@
 
 }
 
-.navbar-menu{
+.navbar-menu {
     @apply h-max md:h-[5rem] md:items-center
 }
 
-.mobile-dropdown{
- @apply font-medium flex flex-col w-full p-4 md:p-0 rounded-lg md:bg-transparent md:flex-row md:space-x-8 md:mt-0 md:border-0 md:gap-0 gap-[1rem];
- @apply bg-[#1f2937] h-full md:items-center
+.mobile-dropdown {
+    @apply font-medium flex flex-col w-full p-4 md:p-0 rounded-lg md:bg-transparent md:flex-row md:space-x-8 md:mt-0 md:border-0 md:gap-[2rem] gap-[1rem];
+    @apply bg-[#1f2937] h-full md:items-center
 }
 
-.mobile-dropdown-item{
-    @apply h-max md:h-[5rem] md:items-center md:flex
+.mobile-dropdown-item {
+    @apply h-max md:h-[5rem] relative;
+    @apply md:hover:border-b-[0.5rem] md:border-b-yellow-300;
+    @apply md:hover:text-yellow-400 text-white;
+
+}
+
+.dropdown-link:hover + .dropdown-menu{
+    @apply md:flex;
+}
+
+.dropdown-link:focus + .dropdown-menu{
+    @apply md:hidden flex;
+}
+
+.mobile-dropdown-item > a{
+
+}
+
+.dropdown-link{
+    @apply py-2 px-3 bg-[#5b5ca2] rounded md:bg-transparent md:text-xl text-[1.1rem] flex md:justify-start justify-between items-center;
+    @apply  md:leading-[5rem] leading-[1rem] p-[1rem] md:p-0;
 }

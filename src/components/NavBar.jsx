@@ -1,16 +1,18 @@
 import { Link } from "react-router-dom";
-import { BiChevronDown, BiSolidChevronRight } from "react-icons/bi";
-import { useState } from "react";
+import { useState} from "react";
 import './NavBar.css'
-
+import {DropDown} from "./DropDown.jsx";
+import {BiChevronDown} from "react-icons/bi";
+import NavBarData from './NavBarData.js'
 
 export const NavBar = () => {
 
     const [dropdownOpen, setDropdownOpen] = useState(false);
+    const [navBarData] = useState(NavBarData())
 
     return (
         <>
-            <nav className="bg-gray-800 border-gray-200 h-[5rem]">
+            <nav className="bg-gray-800 border-gray-200 h-[5rem] sticky z-10">
                 <div className={'flex gap-[3rem] items-center md:justify-start justify-between md:w-full w-full'}>
                     <div className="md:w-max w-full flex p-[1rem] justify-between md:ml-[5%] items-center">
                         <Link to={'/'} className="flex items-center w-max">
@@ -31,40 +33,22 @@ export const NavBar = () => {
                     <div className={`${dropdownOpen ? 'flex' : 'hidden'} navbar-menu md:flex bg-gray-800 top-[4rem] md:top-0 absolute md:relative w-full md:w-max`}>
                         <ul className="mobile-dropdown">
                             <li className="mobile-dropdown-item">
-                                <Link to={'/cursos'}
-                                    className="py-2 px-3 text-white bg-[#5b5ca2] rounded md:bg-transparent md:p-0 md:text-xl text-[1.1rem] flex md:justify-start justify-between
-                                      items-center" aria-current="page">Cursos<BiChevronDown /></Link>
+                                <Link to={'/cursos'} className="dropdown-link" aria-current="page">Cursos<BiChevronDown /></Link>
+                                <DropDown items={navBarData["Cursos"]}/>
                             </li>
                             <li className="mobile-dropdown-item">
-                                <Link to={'/comunidad'}
-                                    className="py-2 px-3 text-white bg-[#5b5ca2] rounded md:bg-transparent md:p-0 md:text-xl text-[1.1rem] flex md:justify-start justify-between
-                                      items-center"
-                                    aria-current="page">Comunidad<BiChevronDown /></Link>
-                                <ul className="dropdown-menu ">
-                                    <li className="dropdown-item">
-                                        <BiSolidChevronRight />
-                                        <Link to={'/comunidad'} aria-current="page">Foro</Link>
-                                    </li>
-                                    <li className="dropdown-item">
-                                        <BiSolidChevronRight />
-                                        <Link to={'/comunidad'} aria-current="page">Blog</Link>
-                                    </li>
-                                    <li className="dropdown-item">
-                                        <BiSolidChevronRight />
-                                        <Link to={'/comunidad'} aria-current="page">Grupos</Link>
-                                    </li>
-                                </ul>
+                                <Link to={'/comunidad'} className="dropdown-link"
+                                      aria-current="page">Comunidad<BiChevronDown /></Link>
+                                <DropDown items={navBarData["Comunidad"]}/>
                             </li>
                             <li className="mobile-dropdown-item">
-                                <Link to={'/media'}
-                                    className="py-2 px-3 text-white bg-[#5b5ca2] rounded md:bg-transparent md:p-0 md:text-xl text-[1.1rem] flex md:justify-start justify-between"
-                                    aria-current="page">Media</Link>
+                                <Link to={'/media'} className="dropdown-link"
+                                      aria-current="page">Media</Link>
                             </li>
                             <li className="mobile-dropdown-item">
-                                <Link to={'/miavance'}
-                                    className="py-2 px-3 text-white bg-[#5b5ca2] rounded md:bg-transparent md:p-0 md:text-xl text-[1.1rem] flex md:justify-start justify-between
-                                      items-center"
-                                    aria-current="page">Mi Avance <BiChevronDown /></Link>
+                                <Link to={'/miavance'} className="dropdown-link"
+                                      aria-current="page">Mi Avance <BiChevronDown /></Link>
+                                <DropDown items={navBarData["MisAvances"]}/>
                             </li>
                         </ul>
                     </div>
