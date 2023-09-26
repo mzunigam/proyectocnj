@@ -1,0 +1,62 @@
+.school-animated{
+    transition: 3s ease-in-out;
+    animation: floating 2s infinite;
+}
+
+.image-animated{
+    transition: .5s ease-in-out;
+}
+
+.background-animated{
+    transition: .5s ease-in-out;
+    @apply opacity-0
+}
+
+.background-animated:hover{
+    transition: .5s ease-in-out;
+    @apply opacity-50
+}
+
+.image-animated:hover{
+    transition: .5s ease-in-out;
+}
+
+.image-animated:hover img{
+    transform: translateX(-50px);
+}
+
+.animate-text{
+    opacity: 0;
+    height: 0;
+    transform: translateY(-50px);
+    transition: 0.1s ease-in-out;
+}
+
+.image-animated:hover .animate-text{
+    opacity: 1;
+    transform: translate(150px,125px);
+    height: max-content;
+    transition: .25s ease-in-out;
+    font-size: 2rem;
+    z-index: 100;
+}
+
+
+@keyframes floating {
+    0% {
+        transform: translate(0,  0px);
+    }
+    50% {
+        transform: translate(0, 10px);
+    }
+    100% {
+        transform: translate(0, -0px);
+    }
+}
+
+.in{
+    transition: 1s ease-in-out;
+}
+.out{
+    transition: 1s ease-in-out;
+}
