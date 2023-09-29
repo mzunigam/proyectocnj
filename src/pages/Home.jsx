@@ -33,8 +33,8 @@ export const Home = () => {
             </section>
         </main>
         <main className={'bg-[#2f2c3d]'}>
-            <section className={'w-full flex md:flex-row md:flex-col md:gap-[25%]'}>
-                <div className={'w-[65%] mx-auto my-[5rem] h-[20rem] bg-blue-900 rounded-xl text-white flex flex-row school-animated'}>
+            <section className={'w-full flex md:flex-row md:flex-col md:gap-[25%] h-max'}>
+                <div className={'w-[65%] mx-auto my-[1rem] h-[20rem] bg-blue-900 rounded-xl text-white flex flex-row '}>
                     <div className={'p-4 w-full flex flex-col gap-[5rem]'}>
                         <div className={'text-2xl'}>Visión y Misión</div>
                         <div className={'text-2xl'}>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab, animi aut consequuntur deleniti et eum harum hic modi nobis
@@ -47,19 +47,15 @@ export const Home = () => {
                     </div>
                 </div>
             </section>
-            <section className={'w-full flex md:flex-row md:flex-col md:gap-[25%]'}>
-                <div className={'grid grid-cols-2 px-[10%] gap-[5%]'}>
-                    <div className={'bg-white p-[1rem]'}>
-                        <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium ad aspernatur beatae consectetur cum, eius error fugiat hic ipsa modi nam nemo numquam possimus qui, quibusdam sunt veritatis. Excepturi, voluptatem.</div>
+            <section className={'w-full flex md:flex-row md:flex-row h-max flex-col md:gap-[2.5%] md:justify-center'}>
+                <div className={'w-[42.5%] my-[1rem] h-max bg-blue-900 rounded-xl text-white flex flex-row'}>
+                    <div className={'p-[1rem]'}>
+                        <img src='../../public/INSTALACION%20DE%20INTERRUPTORES.png' className={'h-[37.75rem]'}/>
                     </div>
-                    <div className={'bg-white p-[1rem]'}>
-                        <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium ad aspernatur beatae consectetur cum, eius error fugiat hic ipsa modi nam nemo numquam possimus qui, quibusdam sunt veritatis. Excepturi, voluptatem.</div>
-                    </div>
-                    <div className={'bg-white p-[1rem]'}>
-                        <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium ad aspernatur beatae consectetur cum, eius error fugiat hic ipsa modi nam nemo numquam possimus qui, quibusdam sunt veritatis. Excepturi, voluptatem.</div>
-                    </div>
-                    <div className={'bg-white p-[1rem]'}>
-                        <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium ad aspernatur beatae consectetur cum, eius error fugiat hic ipsa modi nam nemo numquam possimus qui, quibusdam sunt veritatis. Excepturi, voluptatem.</div>
+                </div>
+                <div className={'w-[20%] my-[1rem] h-max bg-blue-900 rounded-xl text-white flex flex-row'}>
+                    <div className={'p-[1rem]'}>
+                        <img src='../../public/Tableros%20de%20distrIbucion.jpg' />
                     </div>
                 </div>
             </section>
